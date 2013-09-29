@@ -7,7 +7,7 @@ if (Meteor.isClient) {
     this.route('dynamo', {
       path: '/dashboard/dynamo',
         controller:"DashboardController",
-        yieldTemplates: {
+        renderTemplates: {
             'dynamo': {to: 'dashboard-dynamic'}
         }
     });
