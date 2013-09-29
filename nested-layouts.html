@@ -6,9 +6,10 @@
 </body>
 
 <template name="dashboard">
-  Dashboard Content
+  Dashboard Content <br><br>
+    <a href="{{pathFor 'dynamo'}}">Load Dynamo Content</a>
 
-  Dynamo template should be displayed here:
+    <p>Dynamo template should be displayed here:</p>
 
   <div>
     {{yield 'dashboard-dynamic'}}
@@ -16,5 +17,5 @@
 </template>
 
 <template name="dynamo">
-  Dynamo Content
+ ** This is the Dynamo Content **
 </template>
