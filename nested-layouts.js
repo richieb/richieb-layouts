@@ -5,15 +5,22 @@ if (Meteor.isClient) {
     });
 
     this.route('dynamo', {
-      path: '/dashboard/dynamo'
+      path: '/dashboard/dynamo',
+        controller:"DashboardController",
+        yieldTemplates: {
+            'dynamo': {to: 'dashboard-dynamic'}
+        }
     });
   });
 
   DashboardController = RouteController.extend({
-    template: 'dashboard'
+    template: 'dashboard',
+      run:function ()  {
+          this.render();
+      }
   });
 
-  DynamoController = DashboardController.extend({
+ /* DynamoController = DashboardController.extend({
     run: function () {
       this.render();
 
@@ -21,5 +28,5 @@ if (Meteor.isClient) {
         dynamo: {to: 'dashboard-dynamic'}
       });
     }
-  });
+  });*/
 }
