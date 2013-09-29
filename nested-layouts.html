@@ -1,3 +1,37 @@
+
+<head>
+  <title>nested-layouts</title>
+</head>
+
+<body>
+</body>
+
+<template name="dashboard">
+  Dashboard Content <br><br>
+    <a href="{{pathFor 'dynamo'}}">Load Dynamo Content</a>
+
+    <p>Dynamo template should be displayed here:</p>
+
+  <div>
+    {{yield 'dashboard-dynamic'}}
+  </div>
+</template>
+
+<template name="dynamo">
+ ** This is the Dynamo Content **
+</template>
+
+
+
+
+
+
+
+
+
+
+
+<! -- Chris's Original Content
 <head>
   <title>nested-layouts</title>
 </head>
@@ -18,3 +52,4 @@
 <template name="dynamo">
   Dynamo Content
 </template>
+-->
